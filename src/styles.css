@@ -1,1 +1,136 @@
 /* You can add global styles to this file, and also import other style files */
+@import "~bootstrap/dist/css/bootstrap.css";
+
+a {
+    text-decoration: none !important;
+}
+
+.profile-page {
+    display: flex;
+    min-height: 90vh;
+    padding-top: 1rem;
+}
+
+@media (max-width: 990px) {
+    .profile-page {
+        padding-top: 0;
+        min-height: 75vh;
+    }
+}
+
+.profile-page .content {
+    display: flex;
+    flex-direction: column;
+    max-width: 800px;
+    width: 100%;
+    position: relative;
+    z-index: 2;
+    margin: auto;
+    padding: 2rem;
+    background: #fff;
+    border-radius: 2rem;
+    box-shadow: 0 15px 35px rgba(50, 50, 93, 0.1), 0 5px 15px rgba(0, 0, 0, 0.07);
+}
+
+@media (max-width: 990px) {
+    .profile-page .content {
+        max-width: 420px;
+        padding: 0;
+        border-radius: 0;
+    }
+}
+
+.profile-page .content__cover {
+    position: relative;
+    background: linear-gradient(150deg, #1d8cf8 20%, #3358f4 100%);
+}
+
+
+.profile-page .content__avatar {
+    width: 12rem;
+    height: 12rem;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    z-index: 2;
+    transform: translate(-50%, 50%);
+    border-radius: 50%;
+    box-shadow: 0 15px 35px rgba(50, 50, 93, 0.1), 0 5px 15px rgba(0, 0, 0, 0.07);
+}
+
+.profile-page .content__avatar::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    border-radius: 50%;
+}
+
+@media (max-width: 990px) {
+    .profile-page .content__avatar {
+        width: 11rem;
+        height: 11rem;
+        border: 0.3rem solid #fff;
+        box-shadow: none;
+    }
+}
+
+.profile-page .content__title {
+    margin-top: 7.5rem;
+    text-align: center;
+    order: 1;
+}
+
+@media (max-width: 990px) {
+    .profile-page .content__title {
+        margin-top: 5.5rem;
+    }
+}
+
+.profile-page .content__title span {
+    font-size: 1rem;
+}
+
+@media (max-width: 990px) {
+    .profile-page .content__title span {
+        font-size: 0.9rem;
+    }
+}
+
+.profile-page .content__button {
+    margin: 3rem 0 2rem;
+    text-align: center;
+    order: 4;
+}
+
+@media (max-width: 990px) {
+    .profile-page .content__button {
+        margin: 1.5rem 0 2.2rem;
+    }
+}
+
+.profile-page .content__button .button {
+    display: inline-block;
+    padding: 1.2rem 1.8rem;
+    text-align: center;
+    text-decoration: none;
+    background: linear-gradient(100deg, #1d8cf8 30%, #3358f4 100%);
+    border-radius: 2rem;
+    box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08);
+    font-size: 1rem;
+    color: #fff;
+    cursor: pointer;
+}
+
+.profile-page .content__button .button:hover {
+    color: #fff;
+}
+
+@media (max-width: 990px) {
+    .profile-page .content__button .button {
+        padding: 1rem 1.4rem;
+        font-size: 0.9rem;
+    }
+}

@@ -1,0 +1,37 @@
+<div class="album py-5 bg-body-tertiary">
+    <div class="container">
+        <div class="row">
+            <div class="offset-md-1 col-md-10 col">
+                <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+                    <!-- user card show from userlist -->
+                    <div class="col"
+                        *ngFor="let user of userlist | maidsfilter:filterText  | paginate: { itemsPerPage: pageination.perPage, currentPage: pageination.currentPage, totalItems: pageination.totalRecords}">
+                        <a (click)="navigateToUser(user.id)">
+                            <div class="profile-page">
+                                <div class="content">
+                                    <div class="content__cover">
+                                        <div>
+                                            <img [src]="user.avatar" class="content__avatar"/>
+                                        </div>
+                                    </div>
+                                    <div class="content__title">
+                                        <h3>{{user.first_name}} {{user.last_name}}</h3>
+                                        <span>{{user.email}}</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <!-- Pagination for users list using pagination package -->
+                <div class="row mt-4 justify-content-center" *ngIf="userlist?.length">
+                    <div class="col col-md-5">
+                        <pagination-controls [maxSize]="7" (pageChange)="getPageData($event)"
+                            (pageBoundsCorrection)="getPageData($event)">
+                        </pagination-controls>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

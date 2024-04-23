@@ -1,0 +1,21 @@
+<!-- User detail card-->
+<div class="profile-page">
+    <div class="content">
+        <div class="content__cover">
+            <div>
+                <img [src]="userData.avatar" class="content__avatar"/>
+            </div>
+        </div>
+        <div class="content__title">
+            <h1>{{userData.first_name}} {{userData.last_name}}</h1>
+            <span>{{userData.email}}</span>
+        </div>
+        <div class="content__button">
+            <a class="button" [routerLink]="'/'">
+                <div class="button__border"></div>
+                <div class="button__bg"></div>
+                <p class="button__text m-0">Back to Users List</p>
+            </a>
+        </div>
+    </div>
+</div>

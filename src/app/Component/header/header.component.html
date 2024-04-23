@@ -1,0 +1,17 @@
+<!-- Header For Application -->
+<header class="mb-3 border-bottom text-bg-dark">
+  <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between p-3 ">
+    <!-- Logo Section -->
+    <div class="col-md-3 mb-2 mb-md-0">
+      <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
+        <span class="fs-4 text-white">Maids Demo</span>
+      </a>
+    </div>
+
+    <!-- Search User Text Box -->
+    <div class="col-md-3 text-end">
+      <input type="search" class="form-control form-control-dark text-bg-dark" placeholder="Search..." [(ngModel)]="filterText" (ngModelChange)="userService.setFilterText(filterText)"
+        aria-label="Search">
+    </div>
+  </div>
+</header>
